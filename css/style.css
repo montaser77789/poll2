@@ -1,0 +1,529 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    background: orange; /* برتقالي وزهري */
+    padding: 1rem 1rem 0rem 1rem;
+    z-index: 50;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    color: #ef3529; /* اللون الأحمر */
+    font-size: 3rem;
+    text-decoration: none;
+    animation: fadeInDown 1s;
+    position: relative;
+    padding: 5px; /* إضافة مسافة حول النص */
+    background-color: white; /* خلفية بيضاء للإطار */
+    border-radius: 5px; /* حواف دائرية للإطار */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* ظل خفيف حول النص */
+  }
+  
+  .logo::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 2px solid #ef3529; /* إطار برتقالي حول النص */
+    border-radius: 7px; /* حواف دائرية للإطار */
+    z-index: -1; /* وضع الإطار خلف النص */
+    filter: brightness(1.2); /* تحسين الإضاءة حول النص */
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+  
+  .icon {
+    color: #ffffff; /* أبيض */
+    margin-right: 1rem;
+    text-decoration: none;
+  }
+  
+  .icon:hover {
+    color: #ffb6c1; /* لون زهري أفتح */
+  }
+  
+  .menu-icon, .close-icon {
+    cursor: pointer;
+    color: #ffffff; /* أبيض */
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+
+ 
+  }
+  .menu-icon svg, .close-icon svg {
+    width: 20px;
+    height: 20px;
+    font-size: 20px !important;
+    padding: 5px;
+  }
+  .icon-large {
+    font-size: 30px; /* Adjust the size as needed */
+  }
+.icon-sm{
+    font-size: 1.5rem;
+}
+  
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    background:  orange; /* برتقالي وزهري */
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: slideDown 0.5s forwards;
+  }
+  
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .menu li {
+    margin: 1rem 0;
+  }
+  
+  .menu a {
+    color: #000; /* نص أسود */
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  
+  .menu a:hover {
+    color: #ff69b4; /* زهري */
+  }
+  
+  .close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  
+  @media (min-width: 768px) {
+    .menu {
+      display: flex;
+      position: static;
+      height: auto;
+      background: none;
+      flex-direction: row;
+    }
+ 
+    
+ 
+    .menu ul {
+      display: flex;
+      gap: 1rem;
+    }
+  
+    .menu-icon, .close-icon {
+      display: none;
+    }
+  
+  
+  
+   
+  }
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+/* ///////////////////////////////   */
+
+.container {
+    box-sizing: border-box;
+  }
+  
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center vertically */
+    min-height: 100vh;
+    background: orange; /* تدرج الألوان الثلاثي */
+    box-sizing: border-box;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .image-container .review-section {
+    border-radius: 10px;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s;
+    border: 3px solid #fff; /* تعديل لون وسمك الإطار هنا */
+    text-align: center;
+    padding: 5px  0;
+    height: 100%;
+  }
+  .review-section h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.review-section p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.rating {
+    font-size: 1.5rem;
+    color: #28a745;
+}
+
+.stars {
+    font-size: 2rem;
+    color: #00b775;
+    margin: 10px 0;
+}
+
+.trustpilot-link {
+    text-decoration: none;
+    display: inline-block;
+}
+.trustpilot-link img{
+    width: 100%;
+    height: auto;
+}
+
+.trustpilot-logo {
+    width: 200px !important; /* Adjust size as needed */
+    height: 180px !important;
+}
+  .image-container img {
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s;
+    border: 3px solid #fff; /* تعديل لون وسمك الإطار هنا */
+
+  }
+  .image-container a {
+    width: 100%;
+  }
+  
+  .image-container .review-section:hover {
+    transform: scale(1.05);
+  }
+  .image-container img:hover {
+    transform: scale(1.05);
+  }
+  
+  
+  .text-content {
+    text-align: center;
+    color: white;
+    margin-top: 1.75rem;
+    width: 48%; /* Take half the screen width on larger screens */
+  }
+  
+
+  
+  .text-content h2 {
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #000;
+    font-weight: 900;
+  }
+  
+  .buttons {
+    margin-top: 20px;
+  }
+  
+  .btn-learn-more {
+    padding: 12px 50px;
+    font-size: 1.25em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .btn-learn-more a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .btn-learn-more:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (min-width: 768px) {
+    .hero {
+      flex-direction: row; /* Arrange items side by side */
+      justify-content: space-between; /* Space out the content */
+      text-align: left; /* Align text to the left */
+    }
+  
+
+  
+    .text-content {
+      text-align: left;
+      margin-top: 0;
+      margin-left: 2rem;
+    }
+   
+  }
+  
+  @media (max-width: 767px) {
+    .text-content, .image-container {
+      text-align: center;
+      margin-top: 0;
+      width: 100%;
+    }
+  
+  .image-container  .review-section {
+    margin-top: 20px;
+      width: 100%; /* Adjust for smaller screens */
+    }
+    .image-container a  {
+      margin-top: 20px;
+        width: 100%; /* Adjust for smaller screens */
+      }
+    
+  
+    .text-content {
+      min-width: 100%;
+      margin-top: 1.5rem;
+      padding: 0px 5px;
+    }
+    .buttons {
+        display: flex;
+        justify-content: center;
+      }
+  }
+  /* `///////////////////////////// */
+  .about-section {
+    background-color: #f7fafc;
+    padding: 4rem 0;
+  }
+  
+  .container {
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .text-content {
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+  
+
+  
+  .pre-title {
+    color: #319795;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+ 
+  
+  .hollow-text {
+    border-bottom: 2px solid #2d3748;
+  }
+  
+  .featured-text {
+    color: #4299e1;
+  }
+  
+ 
+  
+  .info-items-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .info-item i {
+    color: #4299e1;
+    font-size: 2rem;
+    margin-right: 1rem;
+  }
+  
+  .info-content {
+    text-align: left;
+  }
+  
+  .info-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2d3748;
+  }
+  
+  .info-text {
+    color: #718096;
+  }
+  
+  .cta-area {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .btn-solid {
+    background-color: #00e8c1;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-solid:hover {
+    background-color: #62efd7;
+  }
+  
+ 
+  
+  .image-container .review-section {
+    margin-top: 20px;
+    width: 90%;
+   
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s;
+    border: 3px solid #fff;
+  }
+  .image-container img {
+    margin-top: 20px;
+   
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s;
+    border: 3px solid #fff;
+  }
+  .image-container  a{
+    width: 90%;
+
+  }
+  
+  @media (min-width: 768px) {
+    .content-wrapper {
+      flex-direction: row;
+    }
+  
+    .text-content {
+      text-align: left;
+      margin-top: 0;
+    }
+  
+    .image-container {
+      
+      flex: 1;
+    }
+  
+    .info-items-list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+
+  .rewards-section {
+    background-color: #f8f8f8;
+    padding: 20px 0;
+  }
+  
+ 
+  
+  .marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+  }
+  
+  .marquee-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 15s linear infinite;
+  }
+  
+  .marquee-content span {
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 24px;
+    color: #333;
+  }
+  .marquee-content span img{
+   width: 130px;
+   height: 100px;
+  }
+  .marquee  .marquee-title{
+    text-align: center;
+    padding: 10px;
+    font-size: 45px;
+    font-weight: 800;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-100%, 0);
+    }
+  }
+
+
